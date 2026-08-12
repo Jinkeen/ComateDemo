@@ -1,7 +1,7 @@
 # Quality Guidelines
 
-Run `npm run lint` and `npm run build` before opening or merging a pull request. A page is ready when it is reachable from the role portal, works with deterministic mock data, uses shared components, and remains usable at mobile width.
+Open `index.html` through VS Code Live Server and verify both identities, every navigation item, role switching, and the mobile layout. Check the browser console for errors.
 
-Interactive elements use semantic buttons or links. Controls require visible labels, keyboard access, and a visible active or hover state. Color must not be the only signal for candidate priority or agent status.
+Use semantic links and buttons, visible focus and active states, readable contrast, and concise Chinese copy. Color cannot be the sole indicator for candidate priority or AI status.
 
-Keep pull requests focused on one journey segment. Review changes to routes, domain contracts, global CSS, and shared components with another member.
+Keep pull requests focused. Shared changes to `index.html`, `assets/css/styles.css`, `assets/js/app.js`, and `assets/js/mock-data.js` require team notice before editing.

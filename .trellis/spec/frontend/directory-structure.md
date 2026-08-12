@@ -1,9 +1,9 @@
 # Directory Structure
 
-`src/pages` owns route level composition. `src/components` contains reusable visual building blocks. `src/types` owns cross feature domain contracts. `src/mocks` contains deterministic demo records. `src/services` exposes async interfaces used by pages and features. `src/styles/global.css` contains tokens and shared layout styles.
+This demo uses native HTML, CSS, and JavaScript.
 
-`src/App.tsx` is the route registry. Member A coordinates changes to this file. New complex modules should be placed under `src/features/<feature-name>/` with their private components and hooks.
+`index.html` is the single browser entry. `assets/css/styles.css` owns shared tokens, layout, and responsive styles. `assets/js/app.js` owns hash routing and page rendering. `assets/js/mock-data.js` owns deterministic demo records. Future feature modules should be added under `assets/js/features/` when `app.js` becomes difficult to review.
 
-Use PascalCase for React files, camelCase for services and data modules, and lower case route segments. Keep feature specific code out of `src/components`.
+Use kebab case for folders and CSS classes, camelCase for JavaScript functions and values, and stable lower case hash routes such as `#recruiter/screening`.
 
-Current references: `src/App.tsx`, `src/components/AppShell.tsx`, `src/services/candidateService.ts`.
+Avoid framework dependencies, inline page styles, duplicated navigation, and feature data embedded directly inside rendering functions.

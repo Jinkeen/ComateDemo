@@ -1,10 +1,10 @@
 # Comate AI Demo
 
-Three person AI HR hackathon frontend built with React, TypeScript, Vite, and Trellis.
+原生 HTML、CSS、JavaScript 前端演示。
 
-```bash
-npm install
-npm run dev
-```
+运行方式：
 
-Open the local URL and select recruiter or candidate to enter each demo journey.
+1. 使用 VS Code Live Server 打开 `index.html`。
+2. 或直接在浏览器打开 `index.html`。
+
+入口页可以选择招聘方或候选人。

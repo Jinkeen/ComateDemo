@@ -1,7 +1,5 @@
 # State Management
 
-Use component state for temporary UI state, route parameters for navigable state, and services for domain records. The selected demo role is stored in `localStorage` by `src/pages/RolePortalPage.tsx` only to support quick role switching.
+Use the URL hash for current page state and local variables for short lived interaction state. Demo data comes from `window.COMATE_MOCK` in `assets/js/mock-data.js`.
 
-No global state library is installed. Introduce one only after multiple distant routes require synchronized mutable state. Keep mock records immutable and deterministic in `src/mocks/demoData.ts`.
-
-Do not read mock modules directly from visual components. Access them through a service such as `src/services/candidateService.ts`.
+Future backend integration should introduce `assets/js/services/` with async `fetch` functions while preserving page render inputs. Do not store domain records inside HTML attributes or duplicate the same candidate in several files.

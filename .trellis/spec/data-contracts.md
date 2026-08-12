@@ -2,30 +2,14 @@
 
 ## Source of truth
 
-Shared domain contracts live in `src/types/domain.ts`. Demo records live in `src/mocks/demoData.ts`. Components access candidate records through `src/services/candidateService.ts` so a future API adapter can replace the mock implementation.
+Shared demo records live in `assets/js/mock-data.js` under `window.COMATE_MOCK`. Rendering and interaction logic lives in `assets/js/app.js`. When a backend is added, create `assets/js/services/` and replace direct mock reads with async service functions.
 
-## Core contracts
+## Core records
 
-`Job` contains the role title, summary, and must have requirements. `Candidate` contains display information, extracted tags, match score, fit level, and process stage. `Interview` contains scheduling and status. `AgentEvent` records visible agent activity.
+A job contains `id`, `title`, `summary`, and `mustHave`. A candidate contains `id`, `name`, `title`, `tags`, `score`, and `priority`. Future interview records contain a candidate ID, time, and status. Agent events contain `agent`, `action`, and `status`.
 
-Stable unions:
-
-```ts
-type UserRole = 'recruiter' | 'candidate'
-type CandidateStage = 'screening' | 'interview' | 'completed'
-type FitLevel = 'strong' | 'possible' | 'low'
-```
-
-## Identifier and time rules
-
-All entities use stable string IDs. Mock timestamps use ISO 8601 with an explicit timezone. Routes may use IDs such as `/recruiter/candidates/:candidateId`. Components must not use array indexes as persistent IDs.
-
-## Service boundary
-
-Feature components must obtain domain data from a service interface. The initial example is `CandidateService`. Future services should follow the same pattern for jobs, interviews, assessments, and agent events.
-
-Async service methods return Promises even when backed by local mock data. UI code therefore keeps the same loading and error shape after backend integration.
+Use stable string IDs. Time values use ISO 8601 with an explicit timezone. Candidate priority uses the same agreed strings across both ends.
 
 ## Change policy
 
-Changes to shared contracts require a short team review because recruiter and candidate features consume the same records. Add optional fields only when a real page needs them. Avoid untyped objects, duplicated local interfaces, and `any`.
+Changes to shared data shapes require a short team review. Add fields when a real screen needs them. Avoid duplicate candidate objects, array indexes as IDs, and inconsistent status labels.

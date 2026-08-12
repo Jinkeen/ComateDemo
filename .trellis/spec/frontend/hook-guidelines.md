@@ -1,7 +1,7 @@
-# Hook Guidelines
+# JavaScript Behavior Guidelines
 
-Hooks use the `use` prefix and live beside the feature that owns them. Add a hook when stateful behavior is reused or when a page needs a clear async data boundary.
+This project does not use React hooks. Browser behavior lives in focused functions inside `assets/js/app.js` or a feature file under `assets/js/features/`.
 
-Service calls should be wrapped in a feature hook once loading, failure, or refresh behavior exists. Hooks return typed state. They do not render UI and do not import page components.
+Use DOM events for interactions, hash changes for navigable state, and plain functions for rendering. Keep event registration close to the rendered elements and rebind after each route render when necessary.
 
-Simple click state stays in the component. `RolePortalPage` is the current example of local navigation behavior that does not need a custom hook.
+Avoid global mutable state. The only shared global is `window.COMATE_MOCK`, which contains read only demo records.

@@ -1,14 +1,14 @@
 # Frontend Specifications
 
-The application uses React, TypeScript, Vite, and React Router. Read the root level product, UI, data, and Git specs before changing shared code.
+The application uses native HTML, CSS, and JavaScript for a lightweight hackathon demo.
 
 | Guide | Purpose |
 | --- | --- |
-| [Directory Structure](./directory-structure.md) | Ownership and module placement |
-| [Component Guidelines](./component-guidelines.md) | Shared component patterns |
-| [Hook Guidelines](./hook-guidelines.md) | Hooks and async data |
-| [State Management](./state-management.md) | Local, URL, and service state |
-| [Type Safety](./type-safety.md) | Domain contracts and TypeScript rules |
-| [Quality Guidelines](./quality-guidelines.md) | Verification and accessibility |
+| [Directory Structure](./directory-structure.md) | File ownership and placement |
+| [Component Guidelines](./component-guidelines.md) | Shared HTML and CSS patterns |
+| [JavaScript Behavior](./hook-guidelines.md) | Events and render functions |
+| [State Management](./state-management.md) | URL and demo state |
+| [Data Shapes](./type-safety.md) | Shared object contracts |
+| [Quality Guidelines](./quality-guidelines.md) | Browser verification and accessibility |
 
-Related shared specs: `../product-scope.md`, `../ui-guidelines.md`, `../data-contracts.md`, and `../git-workflow.md`.
+Also read `../product-scope.md`, `../ui-guidelines.md`, `../data-contracts.md`, and `../git-workflow.md`.

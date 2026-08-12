@@ -1,7 +1,7 @@
-# Type Safety
+# Data Shape Guidelines
 
-TypeScript strict mode is enabled in `tsconfig.app.json`. Shared entities and stable unions live in `src/types/domain.ts`. Component props are declared explicitly and service methods return typed Promises.
+The current demo uses documented plain JavaScript object shapes in `assets/js/mock-data.js`. Keep field names stable across both user journeys.
 
-Prefer unions for finite statuses and roles. Use `interface` for domain records and service contracts. Validate route parameters and optional service results before rendering detail views.
+Core records are job, candidate, interview, assessment, and agent event. All records use stable string IDs and ISO 8601 timestamps when time is needed.
 
-Avoid `any`, duplicated entity shapes, unchecked type assertions, and string statuses that bypass the shared unions.
+Check required fields before rendering. Avoid ambiguous field names, array indexes as IDs, and inconsistent status strings. When a backend is added, validate API responses at the service boundary.
