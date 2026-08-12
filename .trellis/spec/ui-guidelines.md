@@ -1,36 +1,55 @@
-# UI Guidelines
+# UI 视觉规范
 
-## Visual direction
+## 视觉方向
 
-Use a calm AI productivity style with generous white space, soft lavender surfaces, purple primary actions, and cyan accents. The implemented source of truth is `src/styles/global.css`.
+整体采用简洁、轻量的 AI 效率工具风格。页面使用充足留白、浅紫色背景、白色卡片、紫色主要操作和青色辅助强调。
 
-Core tokens:
+当前样式以 `assets/css/styles.css` 为准。
 
-| Token | Value |
+| 项目 | 色值或规格 |
 | --- | --- |
-| Primary | `#6c63ff` |
-| Accent | `#22c7c9` |
-| Page background | `#f6f7fb` |
-| Surface | `#ffffff` |
-| Text | `#202235` |
-| Muted text | `#6f7388` |
-| Border | `#e7e8f0` |
-| Card radius | `16px` |
+| 主色 | `#6c63ff` |
+| 辅助色 | `#22c7c9` |
+| 页面背景 | `#f6f7fb` |
+| 卡片背景 | `#ffffff` |
+| 正文颜色 | `#202235` |
+| 次要文字 | `#6f7388` |
+| 边框颜色 | `#e7e8f0` |
+| 卡片圆角 | `16px` |
 
-## Layout
+## 页面布局
 
-The role portal is centered and uses two identity cards. Recruiter and candidate workspaces use `src/components/AppShell.tsx`. Desktop pages use a left navigation and a content width up to 1280 pixels. Screens below 760 pixels collapse to a single content column.
+身份入口页居中展示招聘方和候选人两个身份卡片。
 
-## Shared components
+招聘方页面采用桌面端工作台布局，左侧为导航栏，右侧为主要内容区域。
 
-Reuse `Button`, `Card`, `StatusBadge`, and `AppShell`. New variants should extend these components and the CSS variables. Feature pages should not introduce a second sidebar, a competing primary color, or inline copies of shared button styles.
+候选人页面沿用统一导航结构，同时保证在手机尺寸下可以正常浏览。屏幕宽度小于 760 像素时，页面自动切换为单列布局。
 
-## Interaction
+## 公共样式
 
-Primary actions use purple. Cyan is reserved for candidate identity, highlights, and positive AI states. Every clickable card or button needs a visible hover or active state. Demo actions must provide immediate feedback through navigation, a status badge, progress state, or updated mock content.
+优先复用以下 CSS 类：
 
-## Content
+```text
+.card
+.badge
+.tag
+.sidebar
+.page-heading
+.role-card
+```
 
-Use concise Chinese product copy. AI conclusions should show evidence, confidence, or status when relevant. Sensitive attributes such as age, gender, photo, ethnicity, and marital status must not appear in screening scores.
+新增页面时应继续使用 `assets/css/styles.css` 中的颜色变量、圆角和间距。避免重复创建侧边栏、使用新的主色或在 HTML 中大量编写行内样式。
 
-UI reference screenshots should be stored under `docs/ui-reference/` once the team selects them.
+## 交互规范
+
+主要操作使用紫色按钮。青色用于候选人身份、正向状态和局部强调。
+
+按钮、链接和可点击卡片需要有明确的悬停或选中状态。用户完成操作后，需要通过页面跳转、状态标签、进度提示或内容变化提供即时反馈。
+
+## 文案规范
+
+界面使用简洁中文。AI 给出的筛选结论需要尽量展示匹配理由、证据、置信度或处理状态。
+
+年龄、性别、照片、民族、婚姻状态等敏感信息不能参与候选人匹配评分。
+
+团队最终选定的参考界面截图统一放入 `docs/ui-reference/`。

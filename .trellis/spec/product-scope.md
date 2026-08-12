@@ -1,39 +1,45 @@
-# Product Scope
+# 产品范围
 
-## Goal
+## 项目目标
 
-Comate AI is a three-person hackathon frontend demo covering one complete AI HR journey. Delivery time is three to four days. The demo uses deterministic mock data and keeps API boundaries ready for a future backend.
+Comate AI 是一个由三人协作完成的 AI HR 黑客松前端 Demo，开发周期为三至四天。当前使用固定 Mock 数据完成稳定演示，并为后续接入后端接口保留清晰的数据边界。
 
-## Demo journeys
+## 招聘方流程
 
-Recruiter journey:
+1. 创建岗位，通过 AI 多轮对话澄清招聘需求。
+2. AI 筛选简历，并按照匹配优先级对候选人分层。
+3. 查看候选人详情、匹配理由和相关经历。
+4. 根据岗位和候选人经历生成面试问题。
+5. 筛选双方可用时间并安排面试。
+6. 查看 AI 面试报告和面试评价草稿。
 
-1. Create a role and clarify requirements with AI.
-2. Screen resumes and group candidates by fit priority.
-3. Review candidate details and evidence.
-4. Generate interview questions.
-5. Arrange an interview.
-6. Review the AI interview report and evaluation draft.
+## 候选人流程
 
-Candidate journey:
+1. 填写自己的全部项目经历。
+2. 自动提取经历与能力标签，生成个人电子名片。
+3. 通过 AI 语音电话完成五分钟职业性格测评。
+4. 查看个人性格测评结果和职业特点。
 
-1. Enter all project experiences.
-2. Generate a talent profile card with extracted tags.
-3. Complete a five minute AI voice personality assessment.
-4. Review the personal assessment result.
+## 当前实现范围
 
-## Demo boundaries
+本阶段需要完成：
 
-Included: role selection portal, shared navigation, mock AI progress, recruiter pages, candidate pages, responsive layout, service interfaces, and typed mock data.
+身份选择入口、招聘方页面、候选人页面、公共导航、统一视觉样式、响应式布局、Mock 数据和可展示的 AI Agent 运行状态。
 
-Deferred: real authentication, database, resume parsing, live model calls, real voice calls, calendar integration, email delivery, file storage, and production authorization.
+本阶段暂缓：
 
-## Ownership
+真实登录鉴权、数据库、真实简历解析、真实模型调用、真实语音电话、日历接口、邮件通知、文件存储和生产环境权限系统。
 
-Member A owns project foundations, role requirements, resume screening, and candidate grouping. Member B owns candidate detail, interview questions, scheduling, and reports. Member C owns project entry, profile card, voice assessment, assessment result, and shared visual review.
+## 三人分工
 
-Public routes and shared domain types require team review before changes.
+成员 A 负责公共页面基础、岗位需求澄清、简历筛选和候选人分层。
 
-## Demo success
+成员 B 负责候选人详情、面试题生成、面试排期、面试报告和面试评价。
 
-The reviewer can enter through `/`, choose either identity, complete both journeys with stable mock data, observe AI agent activity, and switch roles without restarting the application.
+成员 C 负责项目经历填写、电子名片、AI 语音测评、测评结果和整体视觉检查。
+
+公共路由、Mock 数据结构和全局样式修改前需要在团队内确认。
+
+## 演示验收标准
+
+评委可以从首页选择招聘方或候选人身份，顺畅体验两个端的主要流程，看到 Agent 协作状态，并能随时切换身份。所有核心页面在演示过程中保持稳定，不依赖网络接口。
