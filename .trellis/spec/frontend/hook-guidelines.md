@@ -1,51 +1,7 @@
 # Hook Guidelines
 
-> How hooks are used in this project.
+Hooks use the `use` prefix and live beside the feature that owns them. Add a hook when stateful behavior is reused or when a page needs a clear async data boundary.
 
----
+Service calls should be wrapped in a feature hook once loading, failure, or refresh behavior exists. Hooks return typed state. They do not render UI and do not import page components.
 
-## Overview
-
-<!--
-Document your project's hook conventions here.
-
-Questions to answer:
-- What custom hooks do you have?
-- How do you handle data fetching?
-- What are the naming conventions?
-- How do you share stateful logic?
--->
-
-(To be filled by the team)
-
----
-
-## Custom Hook Patterns
-
-<!-- How to create and structure custom hooks -->
-
-(To be filled by the team)
-
----
-
-## Data Fetching
-
-<!-- How data fetching is handled (React Query, SWR, etc.) -->
-
-(To be filled by the team)
-
----
-
-## Naming Conventions
-
-<!-- Hook naming rules (use*, etc.) -->
-
-(To be filled by the team)
-
----
-
-## Common Mistakes
-
-<!-- Hook-related mistakes your team has made -->
-
-(To be filled by the team)
+Simple click state stays in the component. `RolePortalPage` is the current example of local navigation behavior that does not need a custom hook.

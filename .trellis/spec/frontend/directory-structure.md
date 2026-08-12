@@ -1,54 +1,9 @@
 # Directory Structure
 
-> How frontend code is organized in this project.
+`src/pages` owns route level composition. `src/components` contains reusable visual building blocks. `src/types` owns cross feature domain contracts. `src/mocks` contains deterministic demo records. `src/services` exposes async interfaces used by pages and features. `src/styles/global.css` contains tokens and shared layout styles.
 
----
+`src/App.tsx` is the route registry. Member A coordinates changes to this file. New complex modules should be placed under `src/features/<feature-name>/` with their private components and hooks.
 
-## Overview
+Use PascalCase for React files, camelCase for services and data modules, and lower case route segments. Keep feature specific code out of `src/components`.
 
-<!--
-Document your project's frontend directory structure here.
-
-Questions to answer:
-- Where do components live?
-- How are features/modules organized?
-- Where are shared utilities?
-- How are assets organized?
--->
-
-(To be filled by the team)
-
----
-
-## Directory Layout
-
-```
-<!-- Replace with your actual structure -->
-src/
-├── ...
-└── ...
-```
-
----
-
-## Module Organization
-
-<!-- How should new features be organized? -->
-
-(To be filled by the team)
-
----
-
-## Naming Conventions
-
-<!-- File and folder naming rules -->
-
-(To be filled by the team)
-
----
-
-## Examples
-
-<!-- Link to well-organized modules as examples -->
-
-(To be filled by the team)
+Current references: `src/App.tsx`, `src/components/AppShell.tsx`, `src/services/candidateService.ts`.

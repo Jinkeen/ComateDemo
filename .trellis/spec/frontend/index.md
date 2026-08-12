@@ -1,39 +1,14 @@
-# Frontend Development Guidelines
+# Frontend Specifications
 
-> Best practices for frontend development in this project.
+The application uses React, TypeScript, Vite, and React Router. Read the root level product, UI, data, and Git specs before changing shared code.
 
----
+| Guide | Purpose |
+| --- | --- |
+| [Directory Structure](./directory-structure.md) | Ownership and module placement |
+| [Component Guidelines](./component-guidelines.md) | Shared component patterns |
+| [Hook Guidelines](./hook-guidelines.md) | Hooks and async data |
+| [State Management](./state-management.md) | Local, URL, and service state |
+| [Type Safety](./type-safety.md) | Domain contracts and TypeScript rules |
+| [Quality Guidelines](./quality-guidelines.md) | Verification and accessibility |
 
-## Overview
-
-This directory contains guidelines for frontend development. Fill in each file with your project's specific conventions.
-
----
-
-## Guidelines Index
-
-| Guide | Description | Status |
-|-------|-------------|--------|
-| [Directory Structure](./directory-structure.md) | Module organization and file layout | To fill |
-| [Component Guidelines](./component-guidelines.md) | Component patterns, props, composition | To fill |
-| [Hook Guidelines](./hook-guidelines.md) | Custom hooks, data fetching patterns | To fill |
-| [State Management](./state-management.md) | Local state, global state, server state | To fill |
-| [Quality Guidelines](./quality-guidelines.md) | Code standards, forbidden patterns | To fill |
-| [Type Safety](./type-safety.md) | Type patterns, validation | To fill |
-
----
-
-## How to Fill These Guidelines
-
-For each guideline file:
-
-1. Document your project's **actual conventions** (not ideals)
-2. Include **code examples** from your codebase
-3. List **forbidden patterns** and why
-4. Add **common mistakes** your team has made
-
-The goal is to help AI assistants and new team members understand how YOUR project works.
-
----
-
-**Language**: All documentation should be written in **English**.
+Related shared specs: `../product-scope.md`, `../ui-guidelines.md`, `../data-contracts.md`, and `../git-workflow.md`.

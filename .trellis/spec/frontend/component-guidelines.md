@@ -1,59 +1,7 @@
 # Component Guidelines
 
-> How components are built in this project.
+Use typed function components and named exports. Shared primitives accept focused props and preserve native element attributes where useful, as shown in `src/components/Button.tsx`.
 
----
+Compose pages with `Card`, `Button`, `StatusBadge`, and `AppShell`. Keep data access outside presentation components. Page components may coordinate service calls and pass typed records downward.
 
-## Overview
-
-<!--
-Document your project's component conventions here.
-
-Questions to answer:
-- What component patterns do you use?
-- How are props defined?
-- How do you handle composition?
-- What accessibility standards apply?
--->
-
-(To be filled by the team)
-
----
-
-## Component Structure
-
-<!-- Standard structure of a component file -->
-
-(To be filled by the team)
-
----
-
-## Props Conventions
-
-<!-- How props should be defined and typed -->
-
-(To be filled by the team)
-
----
-
-## Styling Patterns
-
-<!-- How styles are applied (CSS modules, styled-components, Tailwind, etc.) -->
-
-(To be filled by the team)
-
----
-
-## Accessibility
-
-<!-- A11y requirements and patterns -->
-
-(To be filled by the team)
-
----
-
-## Common Mistakes
-
-<!-- Component-related mistakes your team has made -->
-
-(To be filled by the team)
+Reuse CSS classes and variables from `src/styles/global.css`. Avoid duplicated sidebar markup, untyped props, deeply nested conditional rendering, and feature specific behavior inside shared primitives.
