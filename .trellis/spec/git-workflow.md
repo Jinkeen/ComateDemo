@@ -10,7 +10,7 @@ feature/interview-flow
 feature/candidate-experience
 ```
 
-成员 A 负责协调公共页面路由和 Mock 数据修改。成员 C 负责检查整体视觉一致性。
+成员 A 负责协调公共页面路由和 Mock 数据修改。
 
 ## 每日开发流程
 
