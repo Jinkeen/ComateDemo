@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 聊聊｜Comate AI</title>
+  <link rel="stylesheet" href="../assets/css/chat.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html"><span>CO</span>Comate AI</a>
+    <nav><a href="profile.html">人才名片</a><a class="active" href="chat.html">AI 聊聊</a><a href="#">求职旅程</a></nav>
+    <button class="user-chip" type="button"><span>EL</span>Emma</button>
+  </header>
+
+  <main class="chat-home" id="chat-home">
+    <section class="welcome">
+      <span class="eyebrow">CAREER COMPANION</span>
+      <h1>今晚，想聊点什么？</h1>
+      <p>不用准备标准答案。几分钟的聊天，会让你的职业画像更接近真实的你。</p>
+      <div class="topic-grid">
+        <button class="topic-card selected" data-topic="帮我复盘一次面试" type="button"><i>01</i><strong>复盘一次面试</strong><span>把刚刚没说清的话，慢慢理出来</span></button>
+        <button class="topic-card" data-topic="聊聊最近让我有成就感的事" type="button"><i>02</i><strong>最近的成就感</strong><span>发现容易被自己忽略的能力</span></button>
+        <button class="topic-card" data-topic="我最近有点求职焦虑" type="button"><i>03</i><strong>聊聊求职焦虑</strong><span>先安顿情绪，再想清下一步</span></button>
+      </div>
+      <button class="start-button" id="start-call" type="button"><span class="pulse-dot"></span>开始 3 分钟轻聊</button>
+      <small>随时可以结束，本次对话仅用于完善你的人才画像</small>
+    </section>
+    <aside class="growth-card">
+      <span>本周画像成长</span><strong>68%</strong>
+      <div><i style="width:68%"></i></div>
+      <p>再完成一次聊天，有机会解锁一项「冰山下能力」。</p>
+      <ul><li class="done">项目经历已完善</li><li class="done">职业偏好已了解</li><li>沟通与决策方式待发现</li></ul>
+    </aside>
+  </main>
+
+  <main class="call-scene" id="call-scene" hidden>
+    <div class="call-top"><button id="back-home" type="button">返回</button><span>和 Comate AI 聊聊</span><button type="button">对话记录</button></div>
+    <section class="voice-panel">
+      <span class="call-state" id="call-state">正在倾听</span>
+      <div class="voice-orb" aria-hidden="true"><i></i><i></i><i></i></div>
+      <p class="ai-question" id="ai-question">先从刚刚那场面试开始吧。哪个瞬间让你觉得自己没有表达好？</p>
+      <div class="transcript" id="transcript">你可以像和朋友聊天一样，慢慢说。</div>
+      <time id="timer">00:00</time>
+      <div class="call-controls">
+        <button id="toggle-mic" type="button" aria-label="关闭麦克风"><span>麦克风</span></button>
+        <button class="hangup" id="finish-call" type="button" aria-label="结束通话"><span>结束</span></button>
+        <button id="next-question" type="button" aria-label="下一题"><span>下一题</span></button>
+      </div>
+      <small>Demo 模式，点击“下一题”模拟对话推进</small>
+    </section>
+  </main>
+
+  <div class="result-layer" id="result-layer" hidden>
+    <section class="result-card">
+      <span class="eyebrow">本次聊聊的新发现</span>
+      <h2>你很擅长把混乱的问题<br>重新整理成清晰路径</h2>
+      <p>当面试官追问项目失误时，你会先拆解原因，再补充行动和结果。这个习惯说明你具备稳定的复盘意识。</p>
+      <div class="discovery"><span>新能力</span><strong>结构化复盘</strong><small>来自本次对话的 3 段表达证据</small></div>
+      <div class="result-actions"><button id="discard-result" type="button">暂不加入</button><button class="confirm" id="confirm-result" type="button">加入我的能力拼图</button></div>
+    </section>
+  </div>
+  <div class="toast" id="toast">已加入能力拼图，下次聊天会继续完善它</div>
+  <script src="../assets/js/features/candidate/chat-page.js"></script>
+</body>
+</html>
