@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>求职旅程｜Comate AI</title>
+  <link rel="stylesheet" href="../assets/css/journey.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html"><span>CO</span>Comate AI</a>
+    <nav><a href="profile.html">人才名片</a><a href="chat.html">AI 聊聊</a><a class="active" href="journey.html">求职旅程</a></nav>
+    <button class="user-chip" type="button"><span>EL</span>Emma</button>
+  </header>
+
+  <main class="page-shell">
+    <header class="page-heading">
+      <div><span class="eyebrow">MY CAREER JOURNEY</span><h1>你的机会，正在向前走</h1><p>把每一次投递、交流和反馈放在同一条旅程里。</p></div>
+      <button class="primary" id="add-application" type="button">添加求职机会</button>
+    </header>
+
+    <section class="hero-card">
+      <div class="hero-copy"><span>本周旅程</span><strong>3 个机会正在推进</strong><p>其中 1 个已进入面试阶段。你今天只需完成星川科技的线上测评。</p><button id="focus-task" type="button">开始今日任务</button></div>
+      <div class="hero-number"><small>旅程活跃度</small><b>82</b><span>较上周 +12</span></div>
+      <div class="hero-stats"><div><strong>8</strong><span>已关注</span></div><div><strong>4</strong><span>沟通中</span></div><div><strong>2</strong><span>面试中</span></div></div>
+    </section>
+
+    <section class="content-grid">
+      <div class="main-column">
+        <article class="panel task-panel">
+          <header><div><span class="eyebrow">NEXT STEP</span><h2>最近要做的事</h2></div><button type="button">查看日历</button></header>
+          <div class="task urgent"><time><b>今天</b><span>18:00 前</span></time><div><strong>完成星川科技线上测评</strong><p>AI 品牌增长负责人 · 预计用时 35 分钟</p></div><button class="task-action" type="button">去完成</button></div>
+          <div class="task"><time><b>明天</b><span>14:30</span></time><div><strong>云帆消费一面</strong><p>品牌策略负责人 · 视频面试 · 45 分钟</p></div><button class="task-action light" type="button">准备面试</button></div>
+        </article>
+
+        <article class="panel pipeline-panel">
+          <header><div><span class="eyebrow">OPPORTUNITY FLOW</span><h2>机会进展</h2></div><div class="filters"><button class="active" type="button" data-filter="all">全部</button><button type="button" data-filter="active">进行中</button></div></header>
+          <div class="pipeline-head"><span>机会</span><span>当前进度</span><span>最近更新</span></div>
+          <button class="opportunity" data-status="active" type="button"><span class="logo blue">S</span><span class="job"><strong>星川科技</strong><small>AI 品牌增长负责人 · 上海</small></span><span class="stage"><i style="--step:75%"></i><b>线上测评</b></span><time>10 分钟前</time></button>
+          <button class="opportunity" data-status="active" type="button"><span class="logo orange">Y</span><span class="job"><strong>云帆消费</strong><small>品牌策略负责人 · 杭州</small></span><span class="stage"><i style="--step:88%"></i><b>一面待进行</b></span><time>昨天</time></button>
+          <button class="opportunity" data-status="active" type="button"><span class="logo green">M</span><span class="job"><strong>木棉生活</strong><small>内容增长负责人 · 远程</small></span><span class="stage"><i style="--step:45%"></i><b>HR 沟通</b></span><time>2 天前</time></button>
+          <button class="opportunity muted" data-status="closed" type="button"><span class="logo gray">N</span><span class="job"><strong>野屿品牌</strong><small>创意策划总监 · 深圳</small></span><span class="stage"><i style="--step:25%"></i><b>暂未匹配</b></span><time>5 天前</time></button>
+        </article>
+      </div>
+
+      <aside class="side-column">
+        <article class="panel ai-panel">
+          <div class="ai-mark">CO<i></i></div><span class="eyebrow">AI 旅程提醒</span><h2>今天先完成一件事，就很好</h2><p>星川科技和你的「品牌 0 到 1」「AI 工作流」经历匹配度很高。线上测评建议优先展示你如何推动跨团队落地。</p><button id="open-prep" type="button">让 AI 帮我准备</button>
+        </article>
+        <article class="panel calendar-panel">
+          <header><div><span class="eyebrow">AUG 2026</span><h2>近期安排</h2></div><strong>15</strong></header>
+          <div class="calendar-event"><time>今天<br><b>18:00</b></time><i></i><div><strong>线上测评截止</strong><span>星川科技</span></div></div>
+          <div class="calendar-event"><time>明天<br><b>14:30</b></time><i></i><div><strong>视频一面</strong><span>云帆消费</span></div></div>
+          <div class="calendar-event"><time>周一<br><b>10:00</b></time><i></i><div><strong>HR Coffee Chat</strong><span>木棉生活</span></div></div>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <div class="modal" id="detail-modal" hidden><section><button class="close" type="button">×</button><span class="eyebrow">今日任务准备</span><h2>星川科技线上测评</h2><p>建议准备下面三个表达重点，作答时尽量使用具体数字。</p><ol><li>你如何判断品牌增长机会</li><li>一次跨团队推动项目的经历</li><li>AI 工作流带来的效率提升</li></ol><a href="chat.html">和 AI 练习表达</a></section></div>
+  <div class="toast" id="toast">Demo 中已记录这次操作</div>
+  <script src="../assets/js/features/candidate/journey-page.js"></script>
+</body>
+</html>
