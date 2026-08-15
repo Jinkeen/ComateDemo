@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的人才名片｜Comate AI</title>
+  <link rel="stylesheet" href="../assets/css/profile.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../index.html"><span>CO</span>Comate AI</a>
+    <nav><a class="active" href="profile.html">人才名片</a><a href="#">AI聊聊</a><a href="#">求职旅程</a></nav>
+    <button class="user-chip" type="button"><span>EL</span>Emma</button>
+  </header>
+
+  <main class="workspace">
+    <section class="talent-column">
+      <div class="section-title"><div><span>我的人才 IP</span><h1>人才名片</h1></div><p>像经营朋友圈一样，持续更新职业形象</p></div>
+      <article class="phone-card">
+        <div class="phone-card__actions"><button id="edit-profile">编辑</button><button id="share-profile">分享名片</button></div>
+        <div class="portrait"><span>EL</span><i></i></div>
+        <span class="availability">开放 Coffee Chat</span>
+        <h2>Emma Lin</h2>
+        <p class="role">品牌增长与视觉体验负责人</p>
+        <p class="bio">10 年电商与品牌全链路经验。擅长从 0 到 1 建立品牌、跨团队推动项目，并用 AI 工作流提升内容效率。</p>
+
+        <div class="contact-strip"><a href="#" aria-label="电话">☎</a><a href="#" aria-label="微信">聊</a><a href="#" aria-label="教育经历">学</a><a href="#" aria-label="所在地">沪</a></div>
+        <div class="profile-tabs"><button class="active" data-tab="intro">个人介绍</button><button data-tab="projects">项目经历</button></div>
+
+        <section class="profile-tab is-visible" data-panel="intro">
+          <div class="mini-heading"><div><span>AI 持续更新</span><h3>标签中心</h3></div><button id="manage-tags">管理</button></div>
+          <div class="tag-category"><small>工作背景</small><p><span>品牌 0 到 1</span><span>电商增长</span><span>团队管理</span></p></div>
+          <div class="tag-category"><small>专业技能</small><p><span class="green">视觉策略</span><span class="green">AI 工作流</span><span class="green">项目管理</span></p></div>
+          <div class="tag-category"><small>冰山下能力</small><p><span class="orange">高开放性</span><span class="orange">结果驱动</span><span class="orange">善于共创</span></p></div>
+        </section>
+
+        <section class="profile-tab" data-panel="projects">
+          <div class="mini-heading"><div><span>代表经历</span><h3>项目成果</h3></div><button id="add-project">添加</button></div>
+          <button class="project-item" data-project="双十一品牌增长项目" data-result="核心品类成交额同比增长 42%"><small>2025</small><strong>双十一品牌增长项目</strong><span>核心品类成交额同比增长 42%</span></button>
+          <button class="project-item" data-project="AI 内容生产工作流" data-result="内容交付周期缩短 60%"><small>2026</small><strong>AI 内容生产工作流</strong><span>内容交付周期缩短 60%</span></button>
+        </section>
+      </article>
+    </section>
+
+    <section class="companion-column">
+      <article class="progress-card">
+        <header><div><span class="eyebrow">新的进展</span><h2>有好消息正在靠近</h2></div><time>10 分钟前</time></header>
+        <div class="progress-main"><div class="company-logo">S</div><div><strong>星川科技发来了线上测评</strong><p>AI 品牌增长负责人 · 建议今天 18:00 前完成</p></div><button>查看详情</button></div>
+        <div class="progress-flow"><span class="done">已投递</span><i></i><span class="done">已查看</span><i></i><span class="current">线上测评</span><i></i><span>面试</span></div>
+      </article>
+
+      <article class="chat-card">
+        <header><div class="ai-avatar">CO<i></i></div><div><h2>今日求职搭子</h2><p>我在这里，陪你把下一步想清楚</p></div><span class="online">在线</span></header>
+        <div class="chat-stream" id="chat-stream">
+          <div class="message ai"><span>CO</span><div><p>早上好 Emma。星川科技刚刚发来了线上测评，这是一个不错的进展。</p><p>结合你的人才画像，我建议今天先完成测评，再把“AI 内容工作流”项目置顶。这样会更贴合他们正在寻找的方向。</p><small>09:32</small></div></div>
+          <div class="daily-hint"><span>今日职业签</span><strong>适合主动展示跨界能力</strong><small>幸运方向：AI × 品牌增长</small></div>
+        </div>
+        <div class="quick-prompts" aria-label="推荐问题"><button data-prompt="今天我最值得做什么？">今天我最值得做什么？</button><button data-prompt="哪些岗位更适合我？">哪些岗位更适合我？</button><button data-prompt="帮我优化项目表达">帮我优化项目表达</button><button data-prompt="我有点面试焦虑">我有点面试焦虑</button></div>
+        <form class="chat-input" id="chat-form"><button type="button" aria-label="语音">◉</button><input id="chat-text" placeholder="和我聊聊你的求职困惑…" autocomplete="off"><button class="send" type="submit">发送</button></form>
+      </article>
+    </section>
+  </main>
+
+  <div class="modal" id="project-modal" aria-hidden="true"><form class="modal-card" id="project-form"><button class="modal-close" type="button">×</button><span class="eyebrow">更新人才名片</span><h2>编辑项目经历</h2><label>项目名称<input id="project-name" required></label><label>项目成果<textarea id="project-result" rows="4" required></textarea></label><button class="primary full" type="submit">保存修改</button></form></div>
+  <div class="toast" id="toast">名片链接已复制</div>
+  <script src="../assets/js/features/candidate/profile-page.js"></script>
+</body>
+</html>
