@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>我的人才名片｜Comate AI</title>
   <link rel="stylesheet" href="../assets/css/profile.css">
+  <link rel="stylesheet" href="../assets/css/profile-tweaks.css">
 </head>
 <body>
   <header class="topbar">
@@ -24,20 +25,30 @@
         <p class="role">品牌增长与视觉体验负责人</p>
         <p class="bio">10 年电商与品牌全链路经验。擅长从 0 到 1 建立品牌、跨团队推动项目，并用 AI 工作流提升内容效率。</p>
 
-        <div class="contact-strip"><a href="#" aria-label="电话">☎</a><a href="#" aria-label="微信">聊</a><a href="#" aria-label="教育经历">学</a><a href="#" aria-label="所在地">沪</a></div>
+        <div class="contact-strip">
+          <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h4l2 5-3 2a15 15 0 0 0 5 5l2-3 5 2v4c0 1-1 2-2 2C9 21 3 15 2 7c0-1 1-2 2-2Z"/></svg><span>联系方式</span></a>
+          <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-5 9 5-9 5-9-5Zm4 3v4c3 2 7 2 10 0v-4"/></svg><span>学历</span></a>
+          <a href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><span>上海</span></a>
+        </div>
         <div class="profile-tabs"><button class="active" data-tab="intro">个人介绍</button><button data-tab="projects">项目经历</button></div>
 
         <section class="profile-tab is-visible" data-panel="intro">
-          <div class="mini-heading"><div><span>AI 持续更新</span><h3>标签中心</h3></div><button id="manage-tags">管理</button></div>
-          <div class="tag-category"><small>工作背景</small><p><span>品牌 0 到 1</span><span>电商增长</span><span>团队管理</span></p></div>
-          <div class="tag-category"><small>专业技能</small><p><span class="green">视觉策略</span><span class="green">AI 工作流</span><span class="green">项目管理</span></p></div>
-          <div class="tag-category"><small>冰山下能力</small><p><span class="orange">高开放性</span><span class="orange">结果驱动</span><span class="orange">善于共创</span></p></div>
+          <div class="mini-heading"><div><span>AI 眼中的你 · 持续更新</span><h3>我的能力拼图</h3></div><button id="manage-tags">调整</button></div>
+          <div class="compact-row"><small>能力关键词</small><div class="inline-chips"><span>品牌 0 到 1</span><span>电商增长</span><span class="green">视觉策略</span><span class="green">AI 工作流</span><span class="orange">高开放性</span><span class="orange">善于共创</span></div></div>
+          <div class="compact-row achievements"><small>荣誉与成就</small><div class="achievement-line"><span>🏆 年度品牌创新奖</span><span>⭐ 双十一男装 TOP 1</span><span>⚡ AI 增效先锋</span></div></div>
+          <div class="compact-row social-footprints"><small>数字足迹</small><div class="social-links"><a class="social-link xhs" href="https://www.xiaohongshu.com/" target="_blank" rel="noreferrer"><i>小</i><span><strong>小红书 · Emma的增长手记</strong><em>品牌案例与 AI 提效分享</em></span><b>↗</b></a><a class="social-link github" href="https://github.com/" target="_blank" rel="noreferrer"><i>GH</i><span><strong>GitHub · emma-lin</strong><em>AI 工作流与提示词项目</em></span><b>↗</b></a></div></div>
         </section>
 
         <section class="profile-tab" data-panel="projects">
           <div class="mini-heading"><div><span>代表经历</span><h3>项目成果</h3></div><button id="add-project">添加</button></div>
-          <button class="project-item" data-project="双十一品牌增长项目" data-result="核心品类成交额同比增长 42%"><small>2025</small><strong>双十一品牌增长项目</strong><span>核心品类成交额同比增长 42%</span></button>
-          <button class="project-item" data-project="AI 内容生产工作流" data-result="内容交付周期缩短 60%"><small>2026</small><strong>AI 内容生产工作流</strong><span>内容交付周期缩短 60%</span></button>
+          <button class="project-item" data-project="双十一品牌增长项目" data-result="核心品类成交额同比增长 42%">
+            <div class="project-top"><small>2025 · 项目负责人</small><i>编辑</i></div><strong>双十一品牌增长项目</strong>
+            <p><b>挑战</b> 核心品类增长放缓，年轻用户对品牌认知不足。</p><p><b>行动</b> 重构人群策略与视觉表达，协同商品、投放和内容团队完成全链路落地。</p><p class="project-result"><b>结果</b> 核心品类成交额同比增长 42%，活动素材点击率提升 31%。</p>
+          </button>
+          <button class="project-item" data-project="AI 内容生产工作流" data-result="内容交付周期缩短 60%">
+            <div class="project-top"><small>2026 · 发起人与推动者</small><i>编辑</i></div><strong>AI 内容生产工作流</strong>
+            <p><b>挑战</b> 多渠道内容需求密集，团队重复劳动和沟通成本较高。</p><p><b>行动</b> 搭建从洞察、脚本到视觉初稿的 AI 工作流，并推动 12 人团队采用。</p><p class="project-result"><b>结果</b> 内容交付周期缩短 60%，每月节省约 80 小时重复工作。</p>
+          </button>
         </section>
       </article>
     </section>
