@@ -1,3 +1,12 @@
 .vscode
 .env
 .DS_Store
+reference/comate-agent/node_modules
+reference/comate-agent/.next
+reference/comate-agent/.env.local
+reference/comate-agent/*.db
+reference/comate-agent/**/*.sqlite
+reference/comate-agent/**/*.sqlite-shm
+reference/comate-agent/**/*.sqlite-wal
+reference/comate-agent/.dev-server.log
+reference/comate-agent/tsconfig.tsbuildinfo
